@@ -7,12 +7,37 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Internet Speed Test</title>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Ivan's Speed Test</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Additional navbar items here -->
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <h1 class="my-4 text-center">Internet Speed Test Results</h1>
         <p class="lead"><strong>Download Speed:</strong> {{ download_speed }} Mbps</p>
         <p class="lead"><strong>Upload Speed:</strong> {{ upload_speed }} Mbps</p>
         <button class="btn btn-primary" onclick="window.location.reload();">Run Speed Test Again</button>
     </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html
