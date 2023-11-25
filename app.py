@@ -6,8 +6,8 @@ app = Flask(__name__)
 def get_speed():
     st = speedtest.Speedtest()
     st.get_best_server()
-    download_speed = round(st.download() / 1024 / 1024, 2)  # Round to 2 decimal places
-    upload_speed = round(st.upload() / 1024 / 1024, 2)      # Round to 2 decimal places
+    download_speed = "{:.2f}".format(st.download() / 1024 / 1024)  # Format to 2 decimal places
+    upload_speed = "{:.2f}".format(st.upload() / 1024 / 1024)      # Format to 2 decimal places
     return download_speed, upload_speed
 
 @app.route('/')
